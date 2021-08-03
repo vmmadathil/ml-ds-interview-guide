@@ -4,5 +4,6 @@
 * Connections are usually in one direction. Doubly-linked connections do exist though
 * Not indexed
 * Essentially, it is a linear collection of data elements whose order is not given by their physical placement in memory unlike an array
+* Connected via pointers, which represent the address of a location in memory
   
   ![alt text](img/linked_list.png)
