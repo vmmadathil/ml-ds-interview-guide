@@ -10,8 +10,8 @@ SQL Queries are not written in a way that makes a lot of intuitive sense:
 * *Select*: Used to fetch data
 * *From*: What table to fetch from
 * *Join*: Joins tables based on conditions
-* *Where*: Used to filter records by specific condition
-* *Group By*: Groups rows that have the same values into summary rows; often used with aggregate functions
+* *Where*: Used to filter records by specific condition. Cannot be used on aggregate functions
+* *Group By*: Groups rows that have the same values into summary rows; often used with aggregate functions with having
 * *Having*: Used instead of where for aggregate functions
 * *Order By*: Used to sort the result in ascending or descending order
 * *Limit*: Used to limit the number of records returned
@@ -21,6 +21,14 @@ SQL Queries are not written in a way that makes a lot of intuitive sense:
 Variables must be declared with the DECLARE statement and the data type. Value is optional.
 ```
 DECLARE VARIABLE AS DATA_TYPE = VALUE
+```
+
+## Substrings
+If you must select columns that contain some substring, you can use this synatx:
+```
+SELECT *
+FROM Table
+WHERE column1 LIKE '%substring%'
 ```
 
 ## Functions
